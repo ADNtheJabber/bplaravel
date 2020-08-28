@@ -28,7 +28,7 @@
                                     <td>{{ $client->tel }}</td>
                                     <td>{{ $client->email }}</td>
 
-                                    <td>Supprimer</td>                                        
+                                    <td><a href="{{ route('deleteclientm', ['id'=>$client->id]) }}">Supprimer</a></td>                                        
                                 </tr>
                                 @endforeach
                             </table>
