@@ -13,7 +13,7 @@ class SearchController extends Controller
           
             $data = ClientPhysique::where('cni', 'LIKE', $request->searchP.'%')
                 ->get();
-           
+
             $output = '';
            
             if (count($data)>0) {
@@ -22,7 +22,7 @@ class SearchController extends Controller
               
                 foreach ($data as $row){
                    
-                    $output .= '<li class="list-group-item list-group-item-success">id no: '.$row->id.'</li>
+                    $output .= '<li class="list-group-item list-group-item-success">'.$row->id.'</li>
                                 <p>'.$row->nom.' - '.$row->prenom.' - '.$row->email.'</p>';
                 }
               
